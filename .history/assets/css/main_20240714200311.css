@@ -3120,7 +3120,67 @@ ul.actions.special {
     padding-top: 0;
   }
 }
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
 /* Header and Navigation */
+#header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+#header #logo {
+  float: left;
+  margin-left: 20px;
+}
+
+#header #logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#header #nav {
+  float: right;
+}
+
+#header #nav ul.toplinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#header #nav ul.toplinks li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#header #nav ul.toplinks li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
 
 /* Burger menu icon */
 .menu-icon {

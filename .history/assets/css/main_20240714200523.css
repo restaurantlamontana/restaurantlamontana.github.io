@@ -3122,6 +3122,12 @@ ul.actions.special {
 }
 /* Header and Navigation */
 
+#header #nav ul.toplinks li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
 /* Burger menu icon */
 .menu-icon {
   display: none;

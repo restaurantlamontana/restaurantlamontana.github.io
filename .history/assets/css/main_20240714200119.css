@@ -3120,58 +3120,221 @@ ul.actions.special {
     padding-top: 0;
   }
 }
-/* Header and Navigation */
 
-/* Burger menu icon */
-.menu-icon {
+/* General styles for responsiveness */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+/* Responsive header */
+#logo h1 {
+  font-size: 48px;
+}
+
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav ul li {
+  display: inline-block;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+}
+
+#nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Responsive image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer styles */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex: 1 1 200px;
+  margin: 10px;
+  min-width: 150px;
+}
+
+/* Ensure footer text fits well on mobile */
+.flex-item p,
+.flex-item a {
+  color: white;
+}
+
+/* Media queries for further responsiveness */
+@media (max-width: 768px) {
+  #logo h1 {
+    font-size: 36px;
+  }
+
+  #nav ul {
+    flex-direction: column;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-item {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #logo h1 {
+    font-size: 24px;
+  }
+
+  #nav ul {
+    text-align: center;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-item {
+    margin: 5px 0;
+  }
+}
+
+/* General styles for responsiveness */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+/* Responsive header */
+#logo h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#nav ul li {
+  display: inline-block;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+}
+
+#nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Hamburger menu */
+.hamburger {
   display: none;
   cursor: pointer;
-  font-size: 24px;
-  margin-right: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 10;
 }
 
-/* Responsive adjustments */
-@media only screen and (max-width: 600px) {
-  #header #logo h1 {
-    font-size: 20px;
+.hamburger div {
+  width: 30px;
+  height: 2px;
+  background: #000;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  #logo h1 {
+    font-size: 36px;
   }
 
-  #header #nav {
-    float: none;
-    text-align: center;
-  }
-
-  #header #nav ul.toplinks {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    top: 60px;
-    left: 0;
-  }
-
-  #header #nav ul.toplinks.active {
-    display: block;
-  }
-
-  #header #nav ul.toplinks li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  /* Adjustments for footer */
-  #footer .flex-container {
+  #nav ul {
     flex-direction: column;
-    text-align: center;
+    display: none;
   }
 
-  #footer .flex-item {
-    margin-bottom: 20px;
+  #nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
+
+@media (max-width: 480px) {
+  #logo h1 {
+    font-size: 24px;
+  }
+
+  #nav ul {
+    text-align: center;
+  }
+}
+
+/* Example media query for smartphones */
+@media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+  #logo h1 {
+    font-size: 32px; /* Adjust font size to fit smaller screens */
+  }
+
+  #nav ul.toplinks {
+    display: none; /* Hide the navigation links */
+    /* Consider using a mobile-friendly navigation pattern like a burger menu */
+  }
+
+  /* Example: Making the image grid responsive */
+  .image-grid img {
+    width: 100%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+

@@ -3121,6 +3121,41 @@ ul.actions.special {
   }
 }
 /* Header and Navigation */
+#header {
+  color: white;
+  padding: 10px 0;
+}
+
+#header #logo {
+  float: left;
+  margin-left: 20px;
+}
+
+#header #logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#header #nav {
+  float: right;
+}
+
+#header #nav ul.toplinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#header #nav ul.toplinks li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#header #nav ul.toplinks li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
 
 /* Burger menu icon */
 .menu-icon {
