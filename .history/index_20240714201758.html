@@ -15,7 +15,7 @@
       <section id="header" class="wrapper">
         <!-- Logo -->
         <div id="logo">
-          <h1 style="font-size: 45px;"><a href="index.html">La Montana</a></h1>
+          <h1 style="font-size: 69px;"><a href="index.html">La Montana</a></h1>
         </div>
 
         <!-- Nav -->
@@ -96,5 +96,14 @@
 				</div>
 		</div>
 	</section>
+	<!-- jQuery for burger menu toggle (only for mobile) -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	  $(document).ready(function() {
+		$('.menu-icon').click(function() {
+		  $('#nav ul.toplinks').toggleClass('active');
+		});
+	  });
+	</script>
 </body>
 </html>
