@@ -1,0 +1,140 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
+
+/* header links / top links */
+.toplinks {
+  background-color: black;
+}
+
+/* Additional styles for the image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+  -moz-animation: none !important;
+  -webkit-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+body,
+input,
+textarea,
+select {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #919499;
+  font-size: 14pt;
+  line-height: 1.75em;
+  letter-spacing: 0.025em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #484d55;
+}
+
+a {
+  -moz-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  text-decoration: underline;
+  color: #717479;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+strong,
+b {
+  font-weight: 700;
+  color: #484d55;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 68em;
+}
+
+@media screen and (max-width: 1680px) {
+  .container {
+    width: 70em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1 1 30%;
+  margin: 10px;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.style1 {
+  color: black;
+}
+
+.style2 {
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+.style3 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.style3:hover {
+  background-color: gray;
+}

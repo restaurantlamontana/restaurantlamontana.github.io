@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
       /* Additional CSS for hiding images */
-      .image-grid img:nth-child(n + 7) {
+      .image-grid img:nth-child(n + 5) {
         display: none;
       }
     </style>
@@ -71,18 +71,6 @@
             <img src="images/IMG_3205.JPG" />
             <img src="images/IMG_3206.JPG" />
             <img src="images/IMG_3207.JPG" />
-            <img src="images/2.jpeg" />
-            <img src="images/12.jpeg" />
-            <img src="images/7.jpeg" />
-            <img src="images/3.jpeg" />
-            <img src="images/4.jpeg" />
-            <img src="images/5.jpeg" />
-            <img src="images/6.jpeg" />
-            <img src="images/8.jpeg" />
-            <img src="images/9.jpeg" />
-            <img src="images/10.jpeg" />
-            <img src="images/11.jpeg" />
-            <img src="images/13.jpeg" />
             <img src="images/IMG_3199.JPG" />
             <img src="images/IMG_3200.JPG" />
             <img src="images/IMG_3201.JPG" />
@@ -94,10 +82,7 @@
             <img src="images/IMG_3197.JPG" />
             <img src="images/IMG_3198.JPG" />
           </div>
-          <button
-            id="show-more-btn"
-            style="color: black; background-color: white"
-          >
+          <button id="show-more-btn" class="button style3 large">
             Alle Bilder anzeigen
           </button>
         </div>
@@ -140,18 +125,17 @@
       document
         .getElementById("show-more-btn")
         .addEventListener("click", function () {
-          const images = document.querySelectorAll(
-            ".image-grid img:nth-child(n+7)"
-          );
-          const isHidden =
-            images[0].style.display === "none" ||
-            images[0].style.display === "";
-          images.forEach((img) => {
-            img.style.display = isHidden ? "block" : "none";
+          const images = document.querySelectorAll(".image-grid img");
+          images.forEach((img, index) => {
+            if (index >= 6) {
+              img.style.display =
+                img.style.display === "none" ? "block" : "none";
+            }
           });
-          this.textContent = isHidden
-            ? "Weniger Bilder anzeigen"
-            : "Alle Bilder anzeigen";
+          this.textContent =
+            this.textContent === "Show All Pictures"
+              ? "Show Less"
+              : "Show All Pictures";
         });
     </script>
   </body>
